@@ -44,13 +44,10 @@
 </head>
 <body class="antialiased selection:bg-neutral-200">
 
-    <!-- MAIN APP WRAPPER -->
     <div class="min-h-screen flex flex-col md:flex-row">
         
-        <!-- LEFT SIDEBAR: Persistent Minimalist Navigation -->
         <aside class="w-full md:w-[340px] md:fixed md:top-0 md:left-0 md:h-screen p-8 md:p-12 flex flex-col justify-between bg-[#FAFAFA] z-50">
             <div class="space-y-12">
-                <!-- 1. Brand / Identity Link -->
                 <div>
                     <button onclick="navigateTo('home')" class="text-left group focus:outline-none">
                         <h1 class="text-base font-semibold tracking-tight uppercase text-neutral-900 group-hover:text-neutral-500 transition-colors duration-200">
@@ -60,7 +57,6 @@
                     </button>
                 </div>
 
-                <!-- Navigation Menu -->
                 <nav class="flex flex-col space-y-3 text-sm">
                     <button onclick="navigateTo('about')" id="nav-about" class="text-left text-neutral-400 hover:text-neutral-900 transition-colors duration-200 uppercase tracking-wider font-medium focus:outline-none">
                         About
@@ -74,22 +70,18 @@
                 </nav>
             </div>
 
-            <!-- Footer Meta for Left Column -->
             <div class="hidden md:block text-[11px] text-neutral-400 uppercase tracking-widest">
                 &copy; 2026 Chitsanupong K.
             </div>
         </aside>
 
-        <!-- RIGHT CONTENT AREA: Dynamic View Changes -->
         <main class="w-full md:ml-[340px] p-8 md:p-12 flex-1">
             
-            <!-- VIEW: HOME (LANDING PAGE) -->
             <section id="view-home" class="view-section fade-in">
                 <div class="max-w-5xl h-[70vh] md:h-[80vh] flex flex-col justify-center border-b border-neutral-200">
                     <h2 class="text-2xl md:text-4xl font-light tracking-tight text-neutral-800 max-w-3xl leading-relaxed mb-8">
                         Designing responsive landscapes, prioritizing <span class="font-medium text-neutral-950">ecological resilience</span> and strategic <span class="font-medium text-neutral-950">urban regeneration</span>.
                     </h2>
-                    <!-- Featured Single Image -->
                     <div class="w-full aspect-[16/9] bg-neutral-100 rounded overflow-hidden relative group cursor-pointer" onclick="navigateTo('projects')">
                         <div class="absolute inset-0 bg-neutral-900/5 group-hover:bg-transparent transition-all duration-300 z-10"></div>
                         <img src="images/featured-hero.jpg" alt="Featured Architectural Rendering" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-750 scale-100 group-hover:scale-102" onerror="this.style.display='none'; this.parentNode.innerHTML='<div class=\\'absolute inset-0 flex items-center justify-center text-xs text-neutral-400 uppercase tracking-wider bg-neutral-100 border border-neutral-200 rounded\\'>[ Place your hero landscape render here: images/featured-hero.jpg ]</div>'">
@@ -97,7 +89,6 @@
                 </div>
             </section>
 
-            <!-- VIEW: ABOUT -->
             <section id="view-about" class="view-section hidden">
                 <div class="max-w-3xl pt-4 md:pt-12 fade-in">
                     <h2 class="text-xs uppercase tracking-widest text-neutral-400 mb-8">Profile</h2>
@@ -129,36 +120,33 @@
                             </div>
                         </div>
                         
-                        <!-- Technical Competencies -->
                         <div>
                             <h3 class="font-semibold uppercase tracking-wider text-neutral-900 mb-6">Technical Competencies</h3>
                             <div class="grid grid-cols-2 gap-x-4 gap-y-6 text-neutral-600 font-medium text-xs">
                                 
-                                <!-- QGIS -->
                                 <div class="flex items-center gap-3">
                                     <svg class="w-6 h-6" fill="#589632" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Qgis</title><path d="M12.879 13.006v3.65l-3.004-3.048v-3.495h3.582l2.852 2.893h-3.43zm10.886 7.606V24h-3.654l-5.73-5.9v-3.55h3.354l6.03 6.062zm-10.828-1.448l3.372 3.371c-1.309.442-2.557.726-4.325.726C5.136 23.26 0 18.243 0 11.565 0 4.92 5.136 0 11.984 0 18.864 0 24 4.952 24 11.565c0 2.12-.523 4.076-1.457 5.759l-3.625-3.725a8.393 8.393 0 0 0 .24-2.005c0-4.291-3.148-7.527-7.1-7.527-3.954 0-7.248 3.236-7.248 7.527s3.33 7.6 7.247 7.6c.548 0 .661.017.88-.03z"/></svg>
                                     <span>QGIS</span>
                                 </div>
 
-                                <!-- AutoCAD -->
                                 <div class="flex items-center gap-3">
                                     <svg class="w-6 h-6" fill="#E51050" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>AutoCAD</title><path d="M3.8672 1.0527v.0157L0 3.3848v17.914l3.8965-2.332h18.3398V2.3301c0-.702-.5773-1.2774-1.2793-1.2774H3.8672zm7.5058 4.0098h3.3008l2.9844 9.9512h-2.5879l-.5683-2.1895h-2.9844l-.5703 2.1621h-2.416l2.8417-9.9238zm11.8633.0273v14.877H4.172l-2.0684 1.2383v.4648c0 .702.5793 1.2774 1.2813 1.2774H24V5.0898h-.7637zM12.9668 6.6816l-.9941 4.3243h2.0468l-1.0527-4.3243z"/></svg>
                                     <span>AutoCAD</span>
                                 </div>
 
-                                <!-- Rhino -->
                                 <div class="flex items-center gap-3">
-                                    <svg fill="#801010" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Rhinoceros</title><path d="M6.823 3.103c-.1 0-.213.006-.34.017-.511.044-1.25.18-1.802.329a6.269 6.269 0 0 0-1.15.42c-.231.112-.33.178-.354.273-.023.094.028.217.16.436s.346.533.535.961c.19.428.356.97.361 1.651.006.68-.149 1.5-.245 1.962-.096.462-.133.568-.227.618-.094.05-.245.044-.525-.021-.281-.065-.69-.187-1.1-.259-.41-.072-.819-.093-1.122-.038-.304.056-.504.189-.645.369-.14.18-.224.406-.282.75A6.957 6.957 0 0 0 0 11.687c.005.317.047.49.136.584.088.094.223.109.492.054s.672-.18 1.224-.215a6.302 6.302 0 0 1 1.94.202c.685.182 1.353.49 1.95.93.598.438 1.127 1.007 1.566 1.593.438.586.787 1.189 1.004 1.541.217.353.304.455.372.42.068-.035.117-.207.145-.417a3.141 3.141 0 0 0-.02-.848 7.467 7.467 0 0 0-.32-1.365 5.617 5.617 0 0 0-.495-1.018c-.146-.247-.241-.408-.245-.51-.004-.103.085-.148.51-.315.424-.167 1.185-.457 1.958-.808.772-.351 1.556-.764 2.042-1.106.486-.341.674-.61.724-.937.05-.326-.039-.71-.16-1.076a6.93 6.93 0 0 0-.529-1.193A13.696 13.696 0 0 0 11.28 5.6a9.187 9.187 0 0 0-1.1-1.236c-.282-.255-.421-.31-.51-.29-.09.02-.131.115-.168.47-.037.356-.07.973-.144 1.559a7.468 7.468 0 0 1-.432 1.773 12.543 12.543 0 0 1-.99 1.982c-.388.64-.803 1.212-1.054 1.462-.25.25-.336.18-.477.064l-.486-.4c-.15-.125-.253-.213-.273-.293-.02-.08.045-.15.27-.448.227-.299.615-.825.96-1.478a7.75 7.75 0 0 0 .796-2.282 10.1 10.1 0 0 0 .095-2.338c-.044-.564-.124-.77-.306-.896-.137-.095-.332-.146-.638-.146zm6.48 7.034h-.012c-.084.01-.192.112-.415.294a6.86 6.86 0 0 1-1.017.7c-.458.257-1.038.507-1.51.734-.47.226-.831.429-1.004.712-.172.283-.155.648.04.85.194.204.566.246.883.259.318.013.58-.002.826.087.246.09.475.285.764.516.288.23.637.498.925.561.289.063.518-.079.766-.202.249-.124.516-.23.888-.225.371.005.847.12 1.318.37.47.248.938.63 1.184.866.247.236.272.327.245.362-.028.036-.108.018-.304-.14-.196-.157-.508-.454-.917-.688-.41-.234-.916-.404-1.4-.391-.482.013-.94.21-1.23.55-.29.34-.412.822-.546 1.164-.133.341-.28.543-.47.617-.19.074-.424.02-.703-.099-.28-.12-.604-.307-.874-.442-.269-.136-.484-.22-.62-.353-.136-.132-.195-.31-.203-.571-.01-.26.032-.6.05-.853.02-.25.018-.413-.038-.56a1.079 1.079 0 0 0-.232-.35c-.07-.07-.099-.075-.113-.058-.014.017-.012.058.01.158.023.1.067.26.05.581-.019.321-.098.803-.16 1.17-.062.366-.107.618-.02.808.087.191.306.322.707.54.4.22.982.527 1.518.855.537.327 1.027.673 1.562 1.089.534.415 1.112.9 1.5 1.238.39.339.588.532.742.59.154.059.264-.018.307-.138.044-.12.023-.285-.014-.429a1.174 1.174 0 0 0-.24-.46 4.92 4.92 0 0 0-.68-.704c-.287-.243-.614-.463-.803-.614-.19-.151-.242-.233-.212-.259.03-.026.14.004.302.108.162.103.375.28.612.459.237.178.499.356.733.584.235.228.443.506.583.706.14.201.214.324.294.372.08.049.165.022.277-.05a3.03 3.03 0 0 0 .426-.355c.178-.169.398-.393.551-.633.154-.24.242-.496.299-.772.056-.276.08-.572.247-.862.167-.29.476-.574.994-1.025.518-.451 1.244-1.07 1.891-1.664.648-.595 1.216-1.165 1.696-1.802.479-.638.87-1.342 1.067-1.743.199-.4.205-.498.14-.526-.063-.027-.198.015-.61.313-.414.297-1.106.849-1.886 1.43-.781.58-1.65 1.19-2.336 1.569-.686.378-1.19.524-1.55.562-.361.037-.58-.034-.724-.11-.143-.077-.21-.158-.224-.241-.013-.084.03-.17.135-.275.106-.106.277-.232.447-.392.17-.16.338-.354.468-.556.13-.202.22-.411.261-.592.042-.181.034-.333-.04-.376-.074-.043-.215.023-.376.11-.162.086-.343.192-.593.3a2.683 2.683 0 0 1-.92.235 1.626 1.626 0 0 1-1.088-.313c-.343-.26-.635-.71-.866-1.147-.23-.438-.398-.865-.512-1.12-.108-.242-.168-.33-.246-.33zm-2.215 4.075a.422.422 0 0 0-.294.115c-.094.086-.145.2-.034.338.112.137.385.297.636.469.252.172.481.357.666.42.184.064.323.006.402-.096.08-.102.1-.247-.003-.404-.103-.157-.327-.325-.564-.481-.238-.157-.488-.302-.681-.346a.574.574 0 0 0-.128-.015zm.252.208c.025 0 .053.003.083.01.118.026.272.115.418.211.145.096.283.2.333.289.05.089.014.163-.048.216a.255.255 0 0 1-.247.053c-.1-.031-.216-.126-.36-.219-.145-.093-.319-.184-.387-.268-.068-.084-.031-.162.029-.218a.26.26 0 0 1 .18-.074zm4.778 3.728c.211-.008.42.06.602.24.183.178.34.467.383.732.042.265-.03.505-.125.692a1.58 1.58 0 0 1-.289.397c-.074.074-.109.095-.14.095h-.003c-.033-.001-.062-.023-.208-.171a7.39 7.39 0 0 1-.573-.642c-.165-.22-.232-.383-.263-.568-.032-.185-.027-.39.082-.536.109-.146.323-.23.534-.239zm.093 1.111a.258.258 0 0 0-.153.046c-.058.041-.105.113-.093.185.012.073.085.146.174.255.089.11.195.255.264.335.068.08.1.093.127.091.029-.002.054-.018.086-.048a.349.349 0 0 0 .094-.157.518.518 0 0 0 .002-.316.668.668 0 0 0-.218-.282.476.476 0 0 0-.283-.109z"/></svg>
+                                    <svg class="w-6 h-6" fill="#801010" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <title>Rhinoceros</title>
+                                        <path d="M6.823 3.103c-.1 0-.213.006-.34.017-.511.044-1.25.18-1.802.329a6.269 6.269 0 0 0-1.15.42c-.231.112-.33.178-.354.273-.023.094.028.217.16.436s.346.533.535.961c.19.428.356.97.361 1.651.006.68-.149 1.5-.245 1.962-.096.462-.133.568-.227.618-.094.05-.245.044-.525-.021-.281-.065-.69-.187-1.1-.259-.41-.072-.819-.093-1.122-.038-.304.056-.504.189-.645.369-.14.18-.224.406-.282.75A6.957 6.957 0 0 0 0 11.687c.005.317.047.49.136.584.088.094.223.109.492.054s.672-.18 1.224-.215a6.302 6.302 0 0 1 1.94.202c.685.182 1.353.49 1.95.93.598.438 1.127 1.007 1.566 1.593.438.586.787 1.189 1.004 1.541.217.353.304.455.372.42.068-.035.117-.207.145-.417a3.141 3.141 0 0 0-.02-.848 7.467 7.467 0 0 0-.32-1.365 5.617 5.617 0 0 0-.495-1.018c-.146-.247-.241-.408-.245-.51-.004-.103.085-.148.51-.315.424-.167 1.185-.457 1.958-.808.772-.351 1.556-.764 2.042-1.106.486-.341.674-.61.724-.937.05-.326-.039-.71-.16-1.076a6.93 6.93 0 0 0-.529-1.193A13.696 13.696 0 0 0 11.28 5.6a9.187 9.187 0 0 0-1.1-1.236c-.282-.255-.421-.31-.51-.29-.09.02-.131.115-.168.47-.037.356-.07.973-.144 1.559a7.468 7.468 0 0 1-.432 1.773 12.543 12.543 0 0 1-.99 1.982c-.388.64-.803 1.212-1.054 1.462-.25.25-.336.18-.477.064l-.486-.4c-.15-.125-.253-.213-.273-.293-.02-.08.045-.15.27-.448.227-.299.615-.825.96-1.478a7.75 7.75 0 0 0 .796-2.282 10.1 10.1 0 0 0 .095-2.338c-.044-.564-.124-.77-.306-.896-.137-.095-.332-.146-.638-.146zm6.48 7.034h-.012c-.084.01-.192.112-.415.294a6.86 6.86 0 0 1-1.017.7c-.458.257-1.038.507-1.51.734-.47.226-.831.429-1.004.712-.172.283-.155.648.04.85.194.204.566.246.883.259.318.013.58-.002.826.087.246.09.475.285.764.516.288.23.637.498.925.561.289.063.518-.079.766-.202.249-.124.516-.23.888-.225.371.005.847.12 1.318.37.47.248.938.63 1.184.866.247.236.272.327.245.362-.028.036-.108.018-.304-.14-.196-.157-.508-.454-.917-.688-.41-.234-.916-.404-1.4-.391-.482.013-.94.21-1.23.55-.29.34-.412.822-.546 1.164-.133.341-.28.543-.47.617-.19.074-.424.02-.703-.099-.28-.12-.604-.307-.874-.442-.269-.136-.484-.22-.62-.353-.136-.132-.195-.31-.203-.571-.01-.26.032-.6.05-.853.02-.25.018-.413-.038-.56a1.079 1.079 0 0 0-.232-.35c-.07-.07-.099-.075-.113-.058-.014.017-.012.058.01.158.023.1.067.26.05.581-.019.321-.098.803-.16 1.17-.062.366-.107.618-.02.808.087.191.306.322.707.54.4.22.982.527 1.518.855.537.327 1.027.673 1.562 1.089.534.415 1.112.9 1.5 1.238.39.339.588.532.742.59.154.059.264-.018.307-.138.044-.12.023-.285-.014-.429a1.174 1.174 0 0 0-.24-.46 4.92 4.92 0 0 0-.68-.704c-.287-.243-.614-.463-.803-.614-.19-.151-.242-.233-.212-.259.03-.026.14.004.302.108.162.103.375.28.612.459.237.178.499.356.733.584.235.228.443.506.583.706.14.201.214.324.294.372.08.049.165.022.277-.05a3.03 3.03 0 0 0 .426-.355c.178-.169.398-.393.551-.633.154-.24.242-.496.299-.772.056-.276.08-.572.247-.862.167-.29.476-.574.994-1.025.518-.451 1.244-1.07 1.891-1.664.648-.595 1.216-1.165 1.696-1.802.479-.638.87-1.342 1.067-1.743.199-.4.205-.498.14-.526-.063-.027-.198.015-.61.313-.414.297-1.106.849-1.886 1.43-.781.58-1.65 1.19-2.336 1.569-.686.378-1.19.524-1.55.562-.361.037-.58-.034-.724-.11-.143-.077-.21-.158-.224-.241-.013-.084.03-.17.135-.275.106-.106.277-.232.447-.392.17-.16.338-.354.468-.556.13-.202.22-.411.261-.592.042-.181.034-.333-.04-.376-.074-.043-.215.023-.376.11-.162.086-.343.192-.593.3a2.683 2.683 0 0 1-.92.235 1.626 1.626 0 0 1-1.088-.313c-.343-.26-.635-.71-.866-1.147-.23-.438-.398-.865-.512-1.12-.108-.242-.168-.33-.246-.33zm-2.215 4.075a.422.422 0 0 0-.294.115c-.094.086-.145.2-.034.338.112.137.385.297.636.469.252.172.481.357.666.42.184.064.323.006.402-.096.08-.102.1-.247-.003-.404-.103-.157-.327-.325-.564-.481-.238-.157-.488-.302-.681-.346a.574.574 0 0 0-.128-.015zm.252.208c.025 0 .053.003.083.01.118.026.272.115.418.211.145.096.283.2.333.289.05.089.014.163-.048.216a.255.255 0 0 1-.247.053c-.1-.031-.216-.126-.36-.219-.145-.093-.319-.184-.387-.268-.068-.084-.031-.162.029-.218a.26.26 0 0 1 .18-.074zm4.778 3.728c.211-.008.42.06.602.24.183.178.34.467.383.732.042.265-.03.505-.125.692a1.58 1.58 0 0 1-.289.397c-.074.074-.109.095-.14.095h-.003c-.033-.001-.062-.023-.208-.171a7.39 7.39 0 0 1-.573-.642c-.165-.22-.232-.383-.263-.568-.032-.185-.027-.39.082-.536.109-.146.323-.23.534-.239zm.093 1.111a.258.258 0 0 0-.153.046c-.058.041-.105.113-.093.185.012.073.085.146.174.255.089.11.195.255.264.335.068.08.1.093.127.091.029-.002.054-.018.086-.048a.349.349 0 0 0 .094-.157.518.518 0 0 0 .002-.316.668.668 0 0 0-.218-.282.476.476 0 0 0-.283-.109z"/>
+                                    </svg>
                                     <span>Rhino 3D</span>
                                 </div>
 
-                                <!-- D5 Render (Updated to external image file) -->
                                 <div class="flex items-center gap-3">
-                                    <img src="images/d5logo.svg" alt="D5 Render" class="w-6 h-6 block object-contain" onerror="this.parentNode.innerHTML='<div class=\'w-6 h-6 rounded-full bg-sky-400 flex items-center justify-center text-[10px] font-bold text-white\'>D5</div><span class=\\'text-neutral-400 text-[10px] font-mono\\'>drop file: images/d5logo.svg</span>'">
+                                    <img src="images/d5logo.svg" alt="D5 Render" class="w-6 h-6 block object-contain" onerror="this.parentNode.innerHTML='<div class=\\'w-6 h-6 rounded-full bg-sky-400 flex items-center justify-center text-[10px] font-bold text-white\\'>D5</div><span class=\\'text-neutral-400 text-[10px] font-mono\\'>drop file: images/d5logo.svg</span>'">
                                     <span>D5 Render</span>
                                 </div>
 
-                                <!-- Photoshop -->
                                 <div class="flex items-center gap-3">
                                     <svg class="w-6 h-6" viewBox="0 0 83 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_906_1855)">
@@ -167,7 +155,6 @@
                                     <span>Photoshop</span>
                                 </div>
 
-                                <!-- Illustrator -->
                                 <div class="flex items-center gap-3">
                                     <svg class="w-6 h-6" viewBox="0 0 83 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_906_1865)">
@@ -182,13 +169,11 @@
                 </div>
             </section>
 
-            <!-- VIEW: PROJECTS -->
             <section id="view-projects" class="view-section hidden">
                 <div class="max-w-6xl pt-4 md:pt-12 fade-in">
                     <h2 class="text-xs uppercase tracking-widest text-neutral-400 mb-12">Selected Works</h2>
                     
                     <div class="space-y-24">
-                        <!-- Project Card 1 -->
                         <div onclick="openProject('mahachai')" class="group flex flex-col md:flex-row gap-8 md:gap-12 cursor-pointer pb-12 border-b border-neutral-100">
                             <div class="w-full md:w-1/3 flex flex-col justify-between py-2">
                                 <div>
@@ -204,7 +189,6 @@
                             </div>
                         </div>
 
-                        <!-- Project Card 2 -->
                         <div onclick="openProject('saranrat')" class="group flex flex-col md:flex-row gap-8 md:gap-12 cursor-pointer pb-12 border-b border-neutral-100">
                             <div class="w-full md:w-1/3 flex flex-col justify-between py-2">
                                 <div>
@@ -220,7 +204,6 @@
                             </div>
                         </div>
 
-                        <!-- Project Card 3 -->
                         <div onclick="openProject('chiangmai')" class="group flex flex-col md:flex-row gap-8 md:gap-12 cursor-pointer pb-12 border-b border-neutral-100">
                             <div class="w-full md:w-1/3 flex flex-col justify-between py-2">
                                 <div>
@@ -239,7 +222,6 @@
                 </div>
             </section>
 
-            <!-- VIEW: PROJECT DEEP DIVE -->
             <section id="view-project-detail" class="view-section hidden">
                 <div class="max-w-7xl pt-4 md:pt-12 fade-in">
                     <button onclick="navigateTo('projects')" class="mb-12 inline-flex items-center text-xs uppercase tracking-widest text-neutral-400 hover:text-neutral-900 transition-colors duration-200 focus:outline-none">
@@ -247,7 +229,6 @@
                     </button>
 
                     <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
-                        <!-- Deep Dive Left Info Column -->
                         <div class="w-full lg:w-1/3 lg:sticky lg:top-12 h-fit space-y-10">
                             <div>
                                 <h2 id="project-detail-title" class="text-2xl font-medium tracking-tight text-neutral-900">Project Title</h2>
@@ -277,15 +258,12 @@
                             </div>
                         </div>
 
-                        <!-- Deep Dive Right Multi-Image Media Stack Layout -->
                         <div class="w-full lg:w-2/3 space-y-8" id="project-detail-image-stack">
-                            <!-- Injected Dynamically by JavaScript -->
-                        </div>
+                            </div>
                     </div>
                 </div>
             </section>
 
-            <!-- VIEW: CONTACT -->
             <section id="view-contact" class="view-section hidden">
                 <div class="max-w-2xl pt-4 md:pt-12 fade-in">
                     <h2 class="text-xs uppercase tracking-widest text-neutral-400 mb-12">Contact & Inquiries</h2>
@@ -316,7 +294,6 @@
         </main>
     </div>
 
-    <!-- CORE INTERACTION ARCHITECTURE SCRIPT -->
     <script>
         const projectData = {
             mahachai: {
@@ -402,18 +379,18 @@
 
             const stackContainer = document.getElementById('project-detail-image-stack');
             stackContainer.innerHTML = '';
-
-            data.images.forEach((imgSrc, idx) => {
-                const labelText = data.labels && data.labels[idx] ? data.labels[idx] : `0${idx + 1} / Documentation Image`;
-                const mediaBlock = document.createElement('div');
-                mediaBlock.className = 'space-y-2';
-                mediaBlock.innerHTML = `
-                    <div class="w-full bg-neutral-100 rounded overflow-hidden border border-neutral-200/40">
-                        <img src="${imgSrc}" alt="${data.title} - Layer ${idx}" class="w-full h-auto object-cover block" onerror="this.style.display='none'; this.parentNode.innerHTML='<div class=\\'w-full aspect-[16/10] flex flex-col items-center justify-center p-6 text-center text-xs text-neutral-400 uppercase tracking-wider bg-neutral-100 border border-neutral-200 rounded\\'><div>${labelText}</div><div class=\\'text-[10px] lowercase text-neutral-400/70 mt-2 font-mono\\'>drop file inside: ${imgSrc}</div></div>'">
+            
+            data.images.forEach((imgSrc, index) => {
+                const labelText = data.labels && data.labels[index] ? data.labels[index] : `Media Asset 0${index + 1}`;
+                const block = document.createElement('div');
+                block.className = 'space-y-2';
+                block.innerHTML = `
+                    <div class="w-full bg-neutral-100 rounded overflow-hidden border border-neutral-100">
+                        <img src="${imgSrc}" alt="${labelText}" class="w-full h-auto object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<div class=\\'p-12 text-center text-xs text-neutral-400 uppercase tracking-wider font-mono bg-neutral-100\\'>[ Render/Diagram: ${imgSrc} ]</div>'">
                     </div>
-                    <p class="text-[10px] text-neutral-400 font-normal uppercase tracking-widest pt-1 pl-1">${labelText}</p>
+                    <p class="text-[10px] uppercase tracking-widest text-neutral-400 font-light pl-1">${labelText}</p>
                 `;
-                stackContainer.appendChild(mediaBlock);
+                stackContainer.appendChild(block);
             });
 
             navigateTo('project-detail');
